@@ -9,14 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="style.css">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
 
-  <script type="module" crossorigin src="/assets/index-50fd16f8.js"></script>
-  <link rel="stylesheet" href="/assets/index-3ce9dc3c.css">
 </head>
 <body style="opacity: 0;">
 
@@ -145,7 +143,7 @@
             
 
             <div class="floater">
-                <img id="about_photo" src="/assets/photo2-2fa12d96.jpg" alt="">
+                <img id="about_photo" src="photo2.jpg" alt="">
                 <div>
                     <h2>About Me</h2>
                     <p>
@@ -176,6 +174,93 @@
     });
 </script>
 
+<script type="module" src="/main.js"></script>
+<script type="module">
+    // import Swiper JS
+    import Swiper from 'swiper';
+    import { Navigation, Pagination } from 'swiper/modules';
+    // import Swiper styles
+    import 'swiper/css';
+    import 'swiper/css/navigation';
+    import 'swiper/css/pagination';
 
 
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',({ matches }) => {
+    if (matches) {
+        document.querySelector('html').classList.remove('light');
+        document.querySelector('html').classList.add('dark');
+    } else {
+        document.querySelector('html').classList.add('light');
+        document.querySelector('html').classList.remove('dark');
+    }
+    })
+
+    window.onload = function() {
+        
+        document.querySelector('body').style.opacity = 1;
+        
+        let counter = 0;
+        document.querySelectorAll('a').forEach(function(el) {
+            setTimeout(function() {
+                el.classList.add('underlined');
+            }, (counter++)*500); 
+        });
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // dark mode
+            document.querySelector('html').classList.remove('light');
+            document.querySelector('html').classList.add('dark');
+        } else {
+            document.querySelector('html').classList.add('light');
+            document.querySelector('html').classList.remove('dark');
+        }
+        
+        
+    }
+
+    const scrollPtHideBg = 50;
+    let ticking = false;
+    document.addEventListener("scroll", (event) => {
+        let lastKnownScrollPosition = window.scrollY;
+
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > scrollPtHideBg) {
+                    document.querySelectorAll('canvas')[0].classList.add('hidden');
+                } else {
+                    document.querySelectorAll('canvas')[0].classList.remove('hidden');
+                }
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        modules: [Navigation, Pagination],
+        loop: true,
+        slidesPerView: 3.2,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        spaceBetween: 10,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
 </html>
