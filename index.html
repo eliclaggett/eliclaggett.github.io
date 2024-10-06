@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,16 +27,18 @@
             <ul class="nav">
                 <li><a>Research</a></li>
                 <li><a>Work</a></li>
-                <li><a>Life</a></li>
-                <li>/</li>
-                <li><a id="switch-language">日本語</a></li>
+                <li><a>Personal</a></li>
+                <!-- <li>/</li> -->
+                <!-- <li><a id="switch-language">日本語</a></li> -->
             </ul>
             
             <p class="blurb">I am a PhD student in <a href="https://sc.cs.cmu.edu/program/index.html">Societal Computing</a> at Carnegie Mellon University,
                 <br>developing tools to enhance intercultural connection online,
                 <br>advised by <a href="https://shirado.net">Hirokazu Shirado</a>.
             </p>
-            <i class="far fa-arrow-down-long scroll-indicator"></i>
+            <a class="arrow-down" href="#research-block">
+                <i class="far fa-arrow-down-long scroll-indicator"></i>
+            </a>
         </div>
     </div>
 
@@ -47,14 +49,17 @@
             <div class="timeline_list publication_list">
                 <div class="timeline"></div>
                 <table>
-                    <tr><td><span>2025</span></td><td><strong>Claggett, E.</strong>, Shirado, H. “Socially Aware AI” <i>Under review.</i></td></tr>
-                    <tr><td><span>2025</span></td><td><strong>Claggett, E.</strong>, Shirado, H. “Making Pairs That Cooperate: Chatbot Assessment of Receptiveness in Human Conversations” <i>Accepted.</i></td></tr>
+                    <tr><td><span>2025</span></td><td><strong>Claggett, E.</strong>, Shirado, H. “Relational AI: Facilitating Intergroup Cooperation with Socially Aware Conversational Support” <i>Under review.</i></td></tr>
+                    <tr><td><span>2025</span></td><td><strong>Claggett, E.</strong>, Shirado, H. “Making Pairs That Cooperate: Chatbot Assessment of Receptiveness in Human Conversations” <i> Proceedings of the 2025 ACM Conference on Computer Supported Cooperative Work and Social Computing.</i></td></tr>
                     <!-- <tr><td><span>2023</span></td><td>Smith, J., Baeck, M., Miller, A., <strong>Claggett, E.</strong> “Rainfall frequency Analysis Based in Long-Term High-Resolution Radar Rainfall Fields: Spatial Heterogeneities and Temporal Nonstationarities” <i>Accepted.</i></td></tr> -->
                 </table>
             </div>
             <!-- <div class="profile_photo"></div> -->
             
-            <!-- <i class="far fa-arrow-down-long scroll-indicator"></i> -->
+            <a class="arrow-down" href="#project-block">
+                <span>Selected Projects</span>
+                <i class="far fa-arrow-down-long scroll-indicator"></i>
+            </a>
         </div>
     </div>
 
@@ -67,19 +72,13 @@
             <div class="swiper-outside">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">AI</div>Socially Intelligent Multimodal Transformer</div></div></div>
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">AI</div>Convolutional Neural Network for Face Classification
-                    <!-- hw2p2 -->
-                </div></div></div>
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">AI</div>Long Short-Term Memory Network for Speech Recognition
-                    <!-- hw3p2 -->
-                </div></div></div>
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">AI</div>LAS Model for Speech Recognition
-                    <!-- hw4p2 -->
-                </div></div></div>
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">Experiment</div>Algorithmic Pairing for Cooperation</div></div></div>
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">Experiment</div>Socially Aware Reply Suggestions</div></div></div>
-                    <div class="swiper-slide"><div class="project-wrapper"><div class="project"><div class="pill">Experiment</div>Facial Appearance and Attention</div></div></div>
+                    <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Language-Intervention-Experiment"><div class="project"><div class="pill">Experiment</div>AI Facilitation of Interpersonal Trust</div></a></div>
+                    <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Socially-Aware-Multimodal-ML"><div class="project"><div class="pill">AI</div>Socially Intelligent Multimodal Transformer</div></a></div>
+                    <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Language-Evaluation-Experiment"><div class="project"><div class="pill">Experiment</div>Algorithmic Pairing for Better Conversations</div></a></div>
+                    <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Face-Classification-CNN"><div class="project"><div class="pill">AI</div>Convolutional Neural Network for Face Classification</div></a></div>
+                    <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Face-Morphing-Experiment"><div class="project"><div class="pill">Experiment</div>Social Impacts of AI Face Morphing</div></a></div>
+                    <!-- <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Speech-Recognition-BiLSTM"><div class="project"><div class="pill">AI</div>Long Short-Term Memory Network for Speech Recognition</div></a></div> -->
+                    <div class="swiper-slide"><a class="project-wrapper" target="_blank" href="https://github.com/eliclaggett/Speech-Recognition-LAS"><div class="project"><div class="pill">AI</div>LAS Model for Speech Recognition</div></a></div>
                 </div>
 
                 
@@ -89,7 +88,10 @@
             </div>
             
         
-            <!-- <i class="far fa-arrow-down-long scroll-indicator"></i> -->
+            <a class="arrow-down" href="#work-block">
+                <span>Industry Experience</span>
+                <i class="far fa-arrow-down-long scroll-indicator"></i>
+            </a>
         </div>
     </div>
 
@@ -109,7 +111,10 @@
                 </table>
             </div>
         
-            <!-- <i class="far fa-arrow-down-long scroll-indicator"></i> -->
+            <a class="arrow-down" href="#teaching-block">
+                <span>Teaching Experience</span>
+                <i class="far fa-arrow-down-long scroll-indicator"></i>
+            </a>
         </div>
     </div>
     <div id="teaching-block">
@@ -118,13 +123,17 @@
             <div class="timeline_list experience_list">
                 <div class="timeline"></div>
                 <table>
-                    <tr><td><span>2024</span></td><td>Carnegie Mellon University<br/>Social Agents</td><td>Teaching Assistant</td></tr>
-                    <tr><td><span>2023</span></td><td>University of Tokyo<br/>Summer Institute for Computational Social Science</td><td>Teaching Assistant</td></tr>
-                    <tr><td><span>2021</span></td><td>University of Maryland, Baltimore County<br/>Intermediate Japanese II</td><td>Teaching Assistant</td></tr>
-                    <tr><td><span>2019</span></td><td>University of Maryland, Baltimore County<br/>Intermediate Japanese</td><td>Teaching Assistant</td></tr>
+                    <tr><td><span>2024</span></td><td>Carnegie Mellon University<br/><i>Social Agents</i></td><td>Teaching Assistant</td></tr>
+                    <tr><td><span>2023</span></td><td>University of Tokyo<br/><i>Summer Institute for Computational Social Science</i></td><td>Teaching Assistant</td></tr>
+                    <tr><td><span>2021</span></td><td>University of Maryland, Baltimore County<br/><i>Intermediate Japanese II</i></td><td>Teaching Assistant</td></tr>
+                    <tr><td><span>2019</span></td><td>University of Maryland, Baltimore County<br/><i>Intermediate Japanese</i></td><td>Teaching Assistant</td></tr>
                 </table>
             </div>
         </div>
+        <a class="arrow-down" href="#personal-block">
+            <span>About Me</span>
+            <i class="far fa-arrow-down-long scroll-indicator"></i>
+        </a>
     </div>
     
 
@@ -153,9 +162,9 @@
 
     
     <ul id="footer">
-        <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+        <li><a target="_blank" href="https://github.com/eliclaggett"><i class="fa-brands fa-github"></i></a></li>
         <li>eclagget [at] cs [dot] cmu [dot] edu</li>
-        <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/elijah-claggett-ba7018126/"><i class="fa-brands fa-linkedin"></i></a></li>
     </ul>
 </body>
 <script>
@@ -175,7 +184,19 @@
     import 'swiper/css/navigation';
     import 'swiper/css/pagination';
 
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',({ matches }) => {
+    if (matches) {
+        document.querySelector('html').classList.remove('light');
+        document.querySelector('html').classList.add('dark');
+    } else {
+        document.querySelector('html').classList.add('light');
+        document.querySelector('html').classList.remove('dark');
+    }
+    })
+
     window.onload = function() {
+        
         document.querySelector('body').style.opacity = 1;
         
         let counter = 0;
@@ -184,6 +205,15 @@
                 el.classList.add('underlined');
             }, (counter++)*500); 
         });
+
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // dark mode
+            document.querySelector('html').classList.remove('light');
+            document.querySelector('html').classList.add('dark');
+        } else {
+            document.querySelector('html').classList.add('light');
+            document.querySelector('html').classList.remove('dark');
+        }
         
         
     }
