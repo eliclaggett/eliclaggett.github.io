@@ -55,6 +55,14 @@ div#landing-block {
     text-shadow: 0 0 1em 1em rgba(0,0,0,1);
     z-index: 1;
 }
+html.light ul#footer {
+    background: #fffcf5;
+    box-shadow: 0 0 1em 1em #fffcf5;
+}
+html.dark ul#footer {
+    background: #0b0c12;
+    box-shadow: 0 0 1em 1em #0b0c12;
+}
 div#landing-block div.block-contents {
     margin-top: 10vh;
 }
@@ -192,11 +200,11 @@ p.blurb {
 ul#footer {
     list-style: none;
     position: fixed;
-    bottom: 0.5em;
+    bottom: 0em;
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 0;
+    padding: 0.5em 0 0.5em 0;
     margin: 0;
     box-sizing: border-box;
     z-index: 2;
