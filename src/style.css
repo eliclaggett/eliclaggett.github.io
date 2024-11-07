@@ -54,6 +54,7 @@ div#landing-block {
     box-sizing: border-box;
     text-shadow: 0 0 1em 1em rgba(0,0,0,1);
     z-index: 1;
+    overflow: hidden;
 }
 html.light ul#footer {
     background: #fffcf5;
@@ -69,20 +70,24 @@ div#landing-block div.block-contents {
 div#research-block {
     height: 100vh;
     width: 100%;
+    overflow: hidden;
     /* position:absolute; */
 }
 div#project-block {
     height: 100vh;
+    overflow: hidden;
     width: 100%;
     /* position:absolute; */
 }
 div#personal-block {
     height: 100vh;
     width: 100%;
+    overflow: hidden;
     /* position:absolute; */
 }
 div#work-block, div#teaching-block {
     height: 100vh;
+    overflow: hidden;
 }
 div.block-contents {
     max-width: 42em;
