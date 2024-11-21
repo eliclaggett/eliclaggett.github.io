@@ -527,4 +527,7 @@ html.light div.pill {
   .floater div {
     width: 70%;
   }
+  div#personal-block {
+    padding-bottom: 5em;
+  }
 }
