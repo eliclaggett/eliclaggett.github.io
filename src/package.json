@@ -4,7 +4,7 @@
   "description": "",
   "main": "3d.js",
   "scripts": {
-    "build": "npx vite build && cp ./dist/index.html ../"
+    "build": "npx vite build && cp -r ./dist/* ../"
   },
   "author": "",
   "license": "ISC",
