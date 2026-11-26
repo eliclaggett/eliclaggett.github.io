@@ -9,10 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "swiper": "^11.1.14",
+    "swiper": "^14.3.0",
     "three": "^0.153.0"
   },
   "devDependencies": {
-    "vite": "^4.3.9"
+    "vite": "^8.3.2"
+  },
+  "allowScripts": {
+    "esbuild@0.18.20": true,
+    "fsevents@2.3.3": true
   }
 }
