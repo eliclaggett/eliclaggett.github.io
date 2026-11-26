@@ -5,7 +5,9 @@ import "./style.css";
 document.addEventListener("click", (ev) => {
   const el = ev.target.closest("#switch-language");
 
-  if (el) {
+  if (el.innerText == "English") {
+    window.location.href = "index.html";
+  } else {
     window.location.href = "index_jp.html";
   }
 });
