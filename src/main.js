@@ -1,3 +1,117 @@
+// CSS
+import "./style.css";
+
+// Language switching
+document.addEventListener("click", (ev) => {
+  const el = ev.target.closest("#switch-language");
+
+  if (el) {
+    window.location.href = "index_jp.html";
+  }
+});
+
+// Theming
+function updateTheme() {
+  const isDark = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+
+  document.documentElement.classList.toggle("dark", isDark);
+  document.documentElement.classList.toggle("light", !isDark);
+}
+
+const themeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+updateTheme();
+themeQuery.addEventListener("change", updateTheme);
+
+// Page initialization
+window.addEventListener("load", () => {
+  document.body.style.opacity = 1;
+
+  document.querySelectorAll("a").forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("underlined");
+    }, index * 500);
+  });
+});
+
+// Scroll behavior
+
+const scrollPtHideBg = 50;
+let ticking = false;
+document.addEventListener("scroll", (event) => {
+    let lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+    window.requestAnimationFrame(() => {
+        if (window.scrollY > scrollPtHideBg) {
+        document.querySelectorAll("canvas")[0].classList.add("hidden");
+        } else {
+        document.querySelectorAll("canvas")[0].classList.remove("hidden");
+        }
+        ticking = false;
+    });
+    ticking = true;
+    }
+});
+
+/// Lazy-load Swiper
+async function initializeSwiper() {
+  const swiperElement = document.querySelector(".swiper");
+
+  if (!swiperElement) return;
+
+  const [
+    { default: Swiper },
+    { Navigation, Pagination },
+  ] = await Promise.all([
+    import("swiper"),
+    import("swiper/modules"),
+  ]);
+
+  await Promise.all([
+    import("swiper/css"),
+    import("swiper/css/navigation"),
+    import("swiper/css/pagination"),
+  ]);
+
+  new Swiper(".swiper", {
+    direction: "horizontal",
+    modules: [Navigation, Pagination],
+    loop: true,
+    slidesPerView: 3.2,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    spaceBetween: 10,
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+
+    breakpoints: {
+      100: {
+        slidesPerView: 3,
+      },
+      640: {
+        slidesPerView: 3.2,
+      },
+    },
+  });
+}
+
+initializeSwiper();
+
+// 3d animation
 import * as THREE from 'three';
 import { STLLoader } from 'three/examples/jsm/loaders/STLLoader'
 
